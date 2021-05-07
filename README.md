@@ -38,14 +38,12 @@ body {
 }
 
 body:hover .card {
-  filter: blur(15px);
   transform: scale(0.9);
   opactiy: 0.5;
   transition: 0.9s;
 }
 
 body .card:hover {
-  filter: blur(0);
   transform: scale(1);
   opactiy: 1;
   transition: 0.9s;

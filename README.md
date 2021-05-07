@@ -39,7 +39,6 @@ body {
 
 body:hover .card {
   transform: scale(0.9);
-  opactiy: 0.5;
   transition: 0.9s;
 }
 

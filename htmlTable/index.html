@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    .main-div {
+        width: 100%;
+        height: 100%;
+        background-color: #fff0f3;
+    }
+
+    .main-div h1 {
+        display: flex;
+        justify-content: center;
+        color: #590d22;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 50px;
+    }
+
+    .main-div table {
+        border-collapse: collapse;
+        width: 70%;
+        margin: 0 auto;
+        
+    }
+    .main-div table thead{
+        color: white;
+        background-color: #ff4d6d;
+    }
+    .main-div table tbody{
+        background-color: #ffccd5;
+    }
+    .main-div table th,
+    td {
+        border: 1px solid #fff;
+        padding: 10px;
+        text-align: center;
+
+    }
+    .main-div table thead tr th:first-child{
+        border-bottom-left-radius: 10px;
+    }
+    .main-div table thead tr th:last-child{
+        border-bottom-right-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="main-div">
+        <h1>Squares and Cubes of Number 1-10</h1>
+        <table id="table-1">
+            <thead>
+                <th>Number</th>
+                <th>Square of Number</th>
+                <th>Cubes of Number</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        const tableBody = document.getElementById('table-1').getElementsByTagName("tbody")[0];
+        for (let index = 1; index <= 10; index++) {
+
+            const nodeRow = tableBody.insertRow();
+            const cell1 = nodeRow.insertCell(0);
+            const cell2 = nodeRow.insertCell(1);
+            const cell3 = nodeRow.insertCell(2);
+            cell1.innerHTML = index;
+            cell2.innerHTML = index*index;
+            cell3.innerHTML = index*index*index;
+        }
+    </script>
+</body>
+
+</html>

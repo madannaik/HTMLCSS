@@ -6,7 +6,9 @@
 |:---        | :---         |     :---:      |:---: |
 |1    | Calculator   |`` https://madannaik.github.io/htmlCSS/calculator/index.html  ``| [GO](https://madannaik.github.io/htmlCSS/calculator/index.html)|
 |2    | HTML table   |`` https://madannaik.github.io/htmlCSS/htmlTable/index.html  ``| [GO](https://madannaik.github.io/htmlCSS/htmlTable/index.html) |
-|3    | JS ANIMATION |`` https://madannaik.github.io/htmlCSS/SinpleJSAnimation/index.html ``| [GO](https://madannaik.github.io/htmlCSS/SinpleJSAnimation/index.html) |
+|3    | JS FUNCTIONS |`` https://madannaik.github.io/htmlCSS/JSFunctions/index.html ``| [GO](https://madannaik.github.io/htmlCSS/JSFunctions/index.html) |
+|4    | JS ANIMATION |`` https://madannaik.github.io/htmlCSS/SimpleJSAnimation/index.html ``| [GO](https://madannaik.github.io/htmlCSS/SimpleJSAnimation/index.html) |
+
 
 
 

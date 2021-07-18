@@ -24,7 +24,7 @@
             height: 100%;
             display: grid;
             place-items: center;
-
+            color: red;
         }
     </style>
 </head>
@@ -38,7 +38,7 @@
     <script>
         var id = null;
         const ele = document.getElementById("header");
-        var fontsize = 0;
+        var fontsize = 5;
         let inc;
         clearInterval(id);
         id = setInterval(changeFont, 30);
@@ -46,10 +46,12 @@
             if (fontsize === 50) {
                 inc = true;
                 ele.innerHTML = "TEXT-SHRINKING"
+                ele.style.color = "blue";
             }
-            if (fontsize === 0) {
+            if (fontsize === 5) {
                 inc = false;
-                ele.innerHTML = "TEXT-EXPANDING"
+                ele.innerHTML = "TEXT-GROWING"
+                ele.style.color = "red";
             }
             inc ? --fontsize : ++fontsize;
             ele.style.fontSize = fontsize + "pt"

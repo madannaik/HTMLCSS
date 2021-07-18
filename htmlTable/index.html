@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Table</title>
 </head>
 <style>
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-size: 100%;
     }
     body{
         height: 100vh;
@@ -25,9 +26,10 @@
 
     .main-div h1 {
         display: flex;
+        font-size: 2rem;
         justify-content: center;
         color: #590d22;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: cursive;
         margin-bottom: 50px;
     }
 
@@ -41,9 +43,15 @@
         color: white;
         background-color: #ff4d6d;
     }
-    .main-div table tbody{
+    .main-div table tbody tr{
         background-color: #ffccd5;
+        font-weight: 700;
+        color: #1f1f1f;
     }
+    .main-div table tbody tr:nth-child(2n){
+        background-color: #fadbe0;
+    }
+    
     .main-div table th,
     td {
         border: 1px solid #fff;
@@ -57,6 +65,7 @@
     .main-div table thead tr th:last-child{
         border-bottom-right-radius: 10px;
     }
+    
 </style>
 
 <body>
@@ -66,7 +75,7 @@
             <thead>
                 <th>Number</th>
                 <th>Square of Number</th>
-                <th>Cubes of Number</th>
+                <th>Cube of Number</th>
             </thead>
             <tbody></tbody>
         </table>

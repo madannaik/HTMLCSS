@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS FUNCTIONS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 100%;
+        }
+
+        .main-div {
+            width: 100vw;
+            height: 100vh;
+            background-color: #7f5a83;
+            background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-div .input-div{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3rem;
+           
+        }
+
+        .main-div input[type=text] {
+            width: 15rem;
+            height: 3rem;
+            outline: none;
+            border: none;
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+            border-bottom: 1px solid beige;
+            color: white;
+        }
+
+
+        .main-div input::placeholder {
+            display: block;
+            color: white;
+            padding-left: .4rem;
+            position: absolute;
+            background-color: transparent;
+            top: 30%;
+            transition: all .2s linear;
+        }
+
+        .main-div input:focus::placeholder {
+            top: -10%;
+            font-size: .1rem;
+        }
+
+        .main-div input:focus {
+            border-bottom: 2px solid white;
+        }
+
+        .main-div .btn {
+            width: 6rem;
+            margin-left: 1rem;
+            height: 3rem;
+            border: none;
+            outline: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            outline: none;
+            border-radius: 2px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+            background-color: #2ecc71;
+            color: #ecf0f1;
+            transition: background-color .3s;
+        }
+
+        .btn>span {
+            position: relative;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background-color: #27ae60;
+        }
+
+        .btn span {
+            display: block;
+            padding: 12px 24px;
+        }
+
+        .btn:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 0;
+            padding-top: 0;
+            border-radius: 100%;
+            background-color: rgba(236, 240, 241, .3);
+            transform: translate(-50%, -50%);
+        }
+
+        .btn:active:before {
+            width: 120%;
+            padding-top: 120%;
+            transition: width .2s ease-out, padding-top .2s ease-out;
+        }
+        .main-div .answer-div{
+            color: white;
+            width: auto;
+            height: auto;
+            border-bottom: 2px solid rgb(105, 223, 105);
+            padding-bottom: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="input-div">
+            <input type="text" id="text-ele" placeholder="Enter String/Number">
+            <button class="btn" onclick="evaluate()"><span>Submit</span></button>
+        </div>
+        <div class="answer-div">
+            <h1 class="answer"></h1>
+        </div>
+    </div>
+    <script>
+        function evaluate(){
+            let inp = document.getElementById("text-ele").value;
+            window.alert(inp)    
+        }
+    </script>
+</body>
+
+</html>

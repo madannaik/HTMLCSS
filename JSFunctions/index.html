@@ -127,16 +127,32 @@
     <div class="main-div">
         <div class="input-div">
             <input type="text" id="text-ele" placeholder="Enter String/Number">
-            <button class="btn" onclick="evaluate()"><span>Submit</span></button>
+            <button class="btn" onclick="evalu()"><span>Submit</span></button>
         </div>
         <div class="answer-div">
-            <h1 class="answer"></h1>
+            <h1 class="answer" id="print-answer"></h1>
         </div>
     </div>
     <script>
-        function evaluate(){
+        function evalu(){
             let inp = document.getElementById("text-ele").value;
-            window.alert(inp)    
+            let z = parseInt(inp);
+            let rev = 0;
+            if(z){
+                while(z>0){
+                    var rem = z %10;
+                    rev = rev * 10 + rem;
+                    z = parseInt(z / 10);  
+                    console.log(z);   
+                }
+                document.getElementById("print-answer").innerHTML = "Reverse of number is : "+rev;
+            }
+            else{
+               let ans = inp.search(/[aeiouAEIOU]/)
+              
+                document.getElementById("print-answer").innerHTML = ans===-1?"There is no vowel in the word": "First vowel is found at position :" + (ans + 1);
+            }
+            
         }
     </script>
 </body>
